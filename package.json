@@ -10,11 +10,20 @@
   "engines": {
     "node": ">=8.0.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "babelify": "^7.3.0",
+    "brfs": "^1.4.3"
+  },
   "devDependencies": {
+    "babel-preset-env": "^1.6.1",
     "code": "5.x.x",
     "lab": "14.x.x",
-    "babel-preset-env": "^1.6.1"
+    "rollup": "^0.50.0"
+  },
+  "browserify": {
+    "transform": [
+      "brfs"
+    ]
   },
   "scripts": {
     "test": "lab -a code -t 100 -L",
